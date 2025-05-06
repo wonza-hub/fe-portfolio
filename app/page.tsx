@@ -1,103 +1,175 @@
-import Image from "next/image";
+'use client';
+
+import { useRef, useEffect, useState } from 'react';
+import {
+  Education,
+  Certifications,
+  Introduction,
+  Projects,
+  TechStack,
+} from '@/components/sections/index';
+import { Button } from '@/shared/ui/button';
+import { ChevronDown } from 'lucide-react';
 
 export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+  const sectionRefs = {
+    intro: useRef<HTMLDivElement>(null),
+    projects: useRef<HTMLDivElement>(null),
+    techStack: useRef<HTMLDivElement>(null),
+    certifications: useRef<HTMLDivElement>(null),
+    education: useRef<HTMLDivElement>(null),
+    mentoring: useRef<HTMLDivElement>(null),
+    community: useRef<HTMLDivElement>(null),
+  };
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+  const [activeSection, setActiveSection] = useState('intro');
+
+  const scrollToNextSection = (currentSection: string) => {
+    const sections = Object.keys(sectionRefs);
+    const currentIndex = sections.indexOf(currentSection);
+    const nextIndex = (currentIndex + 1) % sections.length;
+    const nextSection = sections[nextIndex];
+
+    sectionRefs[nextSection as keyof typeof sectionRefs].current?.scrollIntoView({
+      behavior: 'smooth',
+    });
+  };
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY + window.innerHeight / 3;
+
+      for (const section of Object.keys(sectionRefs)) {
+        const element = sectionRefs[section as keyof typeof sectionRefs].current;
+        if (!element) continue;
+
+        const offsetTop = element.offsetTop;
+        const offsetHeight = element.offsetHeight;
+
+        if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
+          setActiveSection(section);
+        }
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  return (
+    <div className="h-screen snap-y snap-mandatory overflow-y-auto">
+      <section
+        ref={sectionRefs.intro}
+        className="relative flex h-screen snap-start flex-col justify-center"
+        id="intro">
+        <Introduction />
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 transform">
+          <Button
+            variant="ghost"
+            size="icon"
+            onClick={() => scrollToNextSection('intro')}
+            className="animate-bounce">
+            <ChevronDown className="h-6 w-6" />
+            <span className="sr-only">다음 섹션으로</span>
+          </Button>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      </section>
+
+      <section
+        ref={sectionRefs.projects}
+        className="relative flex h-screen snap-start flex-col justify-center"
+        id="projects">
+        <Projects />
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 transform">
+          <Button
+            variant="ghost"
+            size="icon"
+            onClick={() => scrollToNextSection('projects')}
+            className="animate-bounce">
+            <ChevronDown className="h-6 w-6" />
+            <span className="sr-only">다음 섹션으로</span>
+          </Button>
+        </div>
+      </section>
+
+      <section
+        ref={sectionRefs.techStack}
+        className="relative flex h-screen snap-start flex-col justify-center"
+        id="tech-stack">
+        <TechStack />
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 transform">
+          <Button
+            variant="ghost"
+            size="icon"
+            onClick={() => scrollToNextSection('techStack')}
+            className="animate-bounce">
+            <ChevronDown className="h-6 w-6" />
+            <span className="sr-only">다음 섹션으로</span>
+          </Button>
+        </div>
+      </section>
+
+      <section
+        ref={sectionRefs.certifications}
+        className="relative flex h-screen snap-start flex-col justify-center"
+        id="certifications">
+        <Certifications />
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 transform">
+          <Button
+            variant="ghost"
+            size="icon"
+            onClick={() => scrollToNextSection('certifications')}
+            className="animate-bounce">
+            <ChevronDown className="h-6 w-6" />
+            <span className="sr-only">다음 섹션으로</span>
+          </Button>
+        </div>
+      </section>
+
+      {/* <section
+        ref={sectionRefs.community}
+        className="h-screen snap-start flex flex-col justify-center relative"
+        id="community"
+      >
+        <Community />
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
+          <Button
+            variant="ghost"
+            size="icon"
+            onClick={() => scrollToNextSection("community")}
+            className="animate-bounce"
+          >
+            <ChevronDown className="h-6 w-6" />
+            <span className="sr-only">다음 섹션으로</span>
+          </Button>
+        </div>
+      </section> */}
+
+      {/* <section
+        ref={sectionRefs.mentoring}
+        className="h-screen snap-start flex flex-col justify-center relative"
+        id="mentoring"
+      >
+        <Mentoring />
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
+          <Button
+            variant="ghost"
+            size="icon"
+            onClick={() => scrollToNextSection("mentoring")}
+            className="animate-bounce"
+          >
+            <ChevronDown className="h-6 w-6" />
+            <span className="sr-only">다음 섹션으로</span>
+          </Button>
+        </div>
+      </section> */}
+
+      <section
+        ref={sectionRefs.education}
+        className="relative flex h-screen snap-start flex-col justify-center"
+        id="education">
+        <Education />
+      </section>
     </div>
   );
 }
