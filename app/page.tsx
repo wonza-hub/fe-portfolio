@@ -1,6 +1,6 @@
 'use client';
 
-import { useRef, useEffect, useState } from 'react';
+import { useRef, useEffect, useState, useMemo } from 'react';
 import {
   Education,
   Certifications,
@@ -12,17 +12,37 @@ import { Button } from '@/shared/ui/button';
 import { ChevronDown } from 'lucide-react';
 
 export default function Home() {
-  const sectionRefs = {
-    intro: useRef<HTMLDivElement>(null),
-    projects: useRef<HTMLDivElement>(null),
-    techStack: useRef<HTMLDivElement>(null),
-    certifications: useRef<HTMLDivElement>(null),
-    education: useRef<HTMLDivElement>(null),
-    mentoring: useRef<HTMLDivElement>(null),
-    community: useRef<HTMLDivElement>(null),
-  };
+  const introRef = useRef<HTMLDivElement>(null);
+  const projectsRef = useRef<HTMLDivElement>(null);
+  const techStackRef = useRef<HTMLDivElement>(null);
+  const certificationsRef = useRef<HTMLDivElement>(null);
+  const educationRef = useRef<HTMLDivElement>(null);
+  const mentoringRef = useRef<HTMLDivElement>(null);
+  const communityRef = useRef<HTMLDivElement>(null);
 
-  const [activeSection, setActiveSection] = useState('intro');
+  // 2) refs 객체 묶기 (identity 안정화)
+  const sectionRefs = useMemo(
+    () => ({
+      intro: introRef,
+      projects: projectsRef,
+      techStack: techStackRef,
+      certifications: certificationsRef,
+      education: educationRef,
+      mentoring: mentoringRef,
+      community: communityRef,
+    }),
+    [
+      introRef,
+      projectsRef,
+      techStackRef,
+      certificationsRef,
+      educationRef,
+      mentoringRef,
+      communityRef,
+    ],
+  );
+
+  const [, setActiveSection] = useState('intro');
 
   const scrollToNextSection = (currentSection: string) => {
     const sections = Object.keys(sectionRefs);
