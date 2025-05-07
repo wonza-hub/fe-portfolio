@@ -63,7 +63,7 @@ export default function TopNavbar() {
           <Link
             href="/"
             className="text-xl font-bold">
-            Woonil
+            Woonil's Portfolio
           </Link>
 
           <nav className="tablet:flex hidden items-center space-x-6">

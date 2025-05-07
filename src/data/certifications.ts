@@ -27,7 +27,7 @@ export const certifications: ICertification[] = [
     number: 'TL2401004244',
   },
   {
-    name: 'OPIc (영어)',
+    name: 'OPIc(영어) IH',
     organization: 'ACTFL',
     date: '2024.09',
     number: '204645127428',
