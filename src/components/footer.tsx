@@ -6,17 +6,17 @@ const socialLinks = [
   {
     name: 'GitHub',
     url: 'https://github.com/wonza-hub',
-    logoUrl: '/assets/svg/site-logo/github.svg',
+    logoUrl: '/assets/img/site-logo/github.svg',
   },
   {
     name: 'Velog',
     url: 'https://velog.io/@one1_programmer/posts',
-    logoUrl: '/assets/svg/site-logo/velog.svg',
+    logoUrl: '/assets/img/site-logo/velog.svg',
   },
   {
     name: 'LinkedIn',
     url: 'https://www.linkedin.com/in/woonil',
-    logoUrl: '/assets/svg/site-logo/linkedin.svg',
+    logoUrl: '/assets/img/site-logo/linkedin.svg',
   },
 ];
 
