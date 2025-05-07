@@ -10,6 +10,7 @@ import {
 } from '@/components/sections/index';
 import { Button } from '@/shared/ui/button';
 import { ChevronDown } from 'lucide-react';
+import Footer from '@/components/footer';
 
 export default function Home() {
   const introRef = useRef<HTMLDivElement>(null);
@@ -189,6 +190,7 @@ export default function Home() {
         className="relative flex h-screen snap-start flex-col justify-center"
         id="education">
         <Education />
+        <Footer />
       </section>
     </div>
   );
