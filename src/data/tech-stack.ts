@@ -30,7 +30,8 @@ export const techStacks: ITechStack[] = [
       {
         name: 'HTML',
         logoUrl: '/assets/img/tech-logo/html.svg',
-        proficiency: '시멘틱 마크업을 사용하는 것을 중요하게 생각합니다.',
+        proficiency:
+          '시멘틱 마크업을 사용하는 것을 중요하게 생각합니다. link 요소의 rel 속성 preconnect, preload, prefetch를 활용해 최적화한 경험이 있습니다.',
       },
       {
         name: 'CSS',
@@ -95,19 +96,54 @@ export const techStacks: ITechStack[] = [
     ],
   },
   {
-    category: '기타',
+    category: '인프라',
     techs: [
+      {
+        name: 'Linux',
+        logoUrl: '/assets/img/tech-logo/linux.svg',
+        proficiency:
+          '기본적인 명령어들을 수행할 수 있으며, 파일 시스템, 사용자 관리에 대해 이해하고 있습니다.',
+      },
       {
         name: 'AWS',
         logoUrl: '/assets/img/tech-logo/aws.svg',
         proficiency:
-          '전반적인 서비스에 대해 이해하고 있으며, 부트캠프 프로젝트 중 다양한 실습과 프로젝트를 통해 여러 서비스들을 활용해본 경험이 있습니다.',
+          '전반적인 서비스에 대해 이해하고 있으며, 공식 문서를 통해 여러 실습을 진행하고 프로젝트를 통해 여러 서비스들을 활용해본 경험이 있습니다.',
       },
+      {
+        name: 'Docker',
+        logoUrl: '/assets/img/tech-logo/docker.svg',
+        proficiency:
+          '기본적인 Dockerfile 명령어들을 이해하고 있습니다. 3티어 아키텍쳐를 구성할 수 있으며, Docker Compose를 활용해 서버를 구축한 경험이 있습니다.',
+      },
+      {
+        name: 'Kubernetes',
+        logoUrl: '/assets/img/tech-logo/k8s.svg',
+        proficiency:
+          'Service, Controller, Ingress, ConfigMap, Secret yaml 파일을 통해 로컬 환경, AWS에 점진적으로 클러스터를 배포한 경험이 있습니다.',
+      },
+    ],
+  },
+  {
+    category: '기타',
+    techs: [
       {
         name: 'Git',
         logoUrl: '/assets/img/tech-logo/git.svg',
         proficiency:
           'Issue 생성 및 PR을 통한 협업에 대해 이해하고 있으며, 최근 시작한 프로젝트에서 git flow 전략을 도입해 원활한 협업 환경을 조성했습니다.',
+      },
+      {
+        name: 'Notion',
+        logoUrl: '/assets/img/tech-logo/notion.svg',
+        proficiency:
+          '협업 시 기본적인 문서 정리와 칸반보드와 간트차트를 통한 일정 관리에 주로 활용합니다.',
+      },
+      {
+        name: 'Slack',
+        logoUrl: '/assets/img/tech-logo/slack.svg',
+        proficiency:
+          '채널과 허들을 활용하여 협업한 적이 있으며, slack api를 활용해 CI 결과 로깅을 구현한 적이 있습니다.',
       },
       {
         name: 'Figma',
