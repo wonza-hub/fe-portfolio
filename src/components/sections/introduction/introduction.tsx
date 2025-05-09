@@ -6,12 +6,12 @@ export default function Introduction() {
           안녕하신가요
         </h1>
         <p className="text-muted-foreground tablet:text-2xl text-xl">
-          프론트엔드 개발자로서
+          개발자로서
           <br />
-          UX와 DX를 모두 고려하며
+          기술이 나온 배경을 이해하고
           <br className="desktop:hidden" />
           <span className="desktop:inline hidden">&nbsp;</span>
-          개발하는 것을 중요하게 생각합니다.
+          적용하는 것을 중요하게 생각합니다.
         </p>
       </div>
 
