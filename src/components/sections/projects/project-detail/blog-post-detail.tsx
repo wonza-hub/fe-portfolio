@@ -26,7 +26,6 @@ export default function BlogPostDetail({ openDrawer, setOpenDrawer, selectedBlog
       <DrawerContent className="h-[85vh]">
         <DrawerHeader>
           <DrawerTitle>{selectedBlogLink?.title}</DrawerTitle>
-          <DrawerDescription>블로그 포스트를 확인하세요</DrawerDescription>
         </DrawerHeader>
         <div className="flex-1 overflow-hidden px-4">
           {selectedBlogLink && (
