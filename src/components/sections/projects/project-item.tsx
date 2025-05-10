@@ -56,7 +56,7 @@ export default function ProjectItem({ project }: { project: IProject }) {
   return (
     <div
       ref={scrollContainerRef}
-      className="h-[70vh] overflow-y-auto">
+      className="scrollbar-hide h-[70vh] overflow-y-auto">
       <dl className="bg-background">
         {/* 소개 섹션 */}
         <div>
