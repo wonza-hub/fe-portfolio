@@ -62,8 +62,8 @@ export default function TopNavbar() {
         <div className="mx-auto flex h-16 items-center justify-between px-6">
           <Link
             href="/"
-            className="text-xl font-bold">
-            Woonil's Portfolio
+            className="hover:text-primary text-xl font-bold">
+            {"Woonil's Portfolio"}
           </Link>
 
           <nav className="tablet:flex hidden items-center space-x-6">
