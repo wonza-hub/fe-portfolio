@@ -36,7 +36,7 @@ export default function Output({ projectTitle, previewImages, previewVideos }: I
                     <CarouselItem
                       key={index}
                       className="laptop:pl-4 laptop:basis-1/2 basis-full">
-                      <div className="mx-auto w-full max-w-md overflow-hidden rounded-lg border">
+                      <div className="mx-auto w-full overflow-hidden rounded-lg border">
                         <Image
                           src={`${image.url}` || '/assets/img/placeholder.webp'}
                           alt={`${projectTitle} 미리보기 ${image.title}`}
