@@ -85,13 +85,13 @@ export const techStacks: ITechStack[] = [
       {
         name: 'MySQL',
         logoUrl: '/assets/img/tech-logo/mysql.svg',
-        proficiency: '쿼리를 자유롭게 작성할 수 있으며, 인덱스 및 뷰에 대해 이해하고 있습니다.',
+        proficiency: '조인, 서브쿼리 심화 쿼리를 작성할 수 있으며, 테이블 정규화 경험이 있습니다.',
       },
       {
         name: 'MongoDB',
         logoUrl: '/assets/img/tech-logo/mongodb.svg',
         proficiency:
-          '복합 인덱스를 활용해 쿼리 속도를 개선한 경험이 있으며, Nextjs와 mongoose를 연동하여 개발한 적이 있습니다.',
+          '기본적인 CRUD를 수행할 수 있으며, 복합 인덱스를 활용해 쿼리 속도를 개선한 경험이 있습니다.',
       },
     ],
   },
