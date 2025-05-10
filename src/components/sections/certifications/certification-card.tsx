@@ -3,16 +3,16 @@ import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/shared/u
 import { CalendarDays, FileBadge, Fingerprint, Landmark } from 'lucide-react';
 
 export default function CertificationCard({ certification }: { certification: ICertification }) {
-  const { name, organization, date, number } = certification;
+  const { name, organization, date } = certification;
 
   return (
     <Card
       key={name}
-      className="tablet:h-full ltablet:gap-0 h-fit justify-between gap-2 overflow-hidden">
+      className="tablet:h-full tablet:gap-0 h-fit justify-between overflow-hidden">
       <CardHeader>
-        <CardTitle className="h-fit">
-          <h3 className="font-semibold">{name}</h3>
-        </CardTitle>
+        {/* <CardTitle className="h-fit"> */}
+        <h3 className="font-semibold">{name}</h3>
+        {/* </CardTitle> */}
       </CardHeader>
       <CardContent className="px-6">
         <div className="tablet:gap-0 tablet:flex-col flex flex-row gap-2 space-y-2">
@@ -30,21 +30,8 @@ export default function CertificationCard({ certification }: { certification: IC
               {date}
             </span>
           </div>
-          {/* 발급번호 */}
-          <div className="text-muted-foreground text-sm font-medium">
-            <span className="flex items-center">
-              <Fingerprint className="icon-sm mr-2" />
-              {number}
-            </span>
-          </div>
         </div>
       </CardContent>
-      <CardFooter className="flex flex-row justify-end">
-        <button className="flex cursor-pointer items-center">
-          <FileBadge className="icon-sm mr-1" />
-          자세히보기
-        </button>
-      </CardFooter>
     </Card>
   );
 }
