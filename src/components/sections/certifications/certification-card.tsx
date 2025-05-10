@@ -1,6 +1,6 @@
 import { ICertification } from '@/data/type';
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/shared/ui/card';
-import { CalendarDays, FileBadge, Fingerprint, Landmark } from 'lucide-react';
+import { Card, CardContent, CardHeader } from '@/shared/ui/card';
+import { CalendarDays, Landmark } from 'lucide-react';
 
 export default function CertificationCard({ certification }: { certification: ICertification }) {
   const { name, organization, date } = certification;
