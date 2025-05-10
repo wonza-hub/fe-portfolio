@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { Tabs, TabsList, TabsTrigger } from '@/shared/ui/tabs';
-import ProjectDetail from './project-detail';
+import ProjectItem from './project-item';
 import { projects } from '@/data/projects';
 
 export default function Projects() {
@@ -11,7 +11,7 @@ export default function Projects() {
   return (
     <div className="tablet:px-6 mx-auto h-full w-full max-w-[72rem] px-2 py-12">
       <h2 className="section-header">프로젝트</h2>
-      <div className="space-y-6">
+      <div className="space-y-2">
         {/* 프로젝트 선택 탭 */}
         <Tabs
           defaultValue={projects[0].id}
@@ -35,8 +35,8 @@ export default function Projects() {
         </Tabs>
 
         {/* 프로젝트 내용 */}
-        <div className="w-full">
-          <ProjectDetail project={activeProject} />
+        <div className="relative w-full">
+          <ProjectItem project={activeProject} />
         </div>
       </div>
     </div>
