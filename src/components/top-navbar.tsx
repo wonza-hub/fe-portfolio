@@ -18,13 +18,10 @@ const navItems = [
 
 export default function TopNavbar() {
   const [activeSection, setActiveSection] = useState('');
-  const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10);
-
       const scrollPosition = window.scrollY + window.innerHeight / 3;
 
       const sections = document.querySelectorAll('section[id]');
@@ -54,11 +51,7 @@ export default function TopNavbar() {
 
   return (
     <>
-      <header
-        className={cn(
-          'fixed top-0 z-50 w-full transition-all duration-300',
-          isScrolled ? 'bg-background/80 shadow-sm backdrop-blur-md' : 'bg-transparent',
-        )}>
+      <header className={cn('bg-background fixed top-0 z-50 w-full transition-all duration-300')}>
         <div className="mx-auto flex h-16 items-center justify-between px-6">
           <Link
             href="/"
