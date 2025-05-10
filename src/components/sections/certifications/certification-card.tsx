@@ -8,23 +8,21 @@ export default function CertificationCard({ certification }: { certification: IC
   return (
     <Card
       key={name}
-      className="tablet:h-full tablet:gap-0 h-fit justify-between overflow-hidden">
+      className="tablet:h-full tablet:gap-2 h-fit justify-between gap-0 overflow-hidden">
       <CardHeader>
-        {/* <CardTitle className="h-fit"> */}
         <h3 className="font-semibold">{name}</h3>
-        {/* </CardTitle> */}
       </CardHeader>
       <CardContent className="px-6">
-        <div className="tablet:gap-0 tablet:flex-col flex flex-row gap-2 space-y-2">
+        <div className="tablet:gap-0 tablet:flex-col flex flex-wrap gap-2">
           {/* 발급기관 */}
-          <div className="text-muted-foreground text-sm font-medium">
+          <div className="text-muted-foreground tablet:text-sm text-xs font-medium">
             <span className="flex items-center">
               <Landmark className="icon-sm mr-2" />
               {organization}
             </span>
           </div>
           {/* 발급일자 */}
-          <div className="text-muted-foreground text-sm font-medium">
+          <div className="text-muted-foreground tablet:text-sm text-xs font-medium">
             <span className="flex items-center">
               <CalendarDays className="icon-sm mr-2" />
               {date}
