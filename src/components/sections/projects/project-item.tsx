@@ -41,7 +41,7 @@ export default function ProjectItem({ project }: { project: IProject }) {
   }, [id]);
 
   // 프로젝트 변경 시 스크롤 초기화
-  useResetScroll(scrollContainerRef, id);
+  useResetScroll(scrollContainerRef, [id]);
 
   const handleBlogLinkClick = (role: IProjectRole) => {
     if (role.blogLink && role.blogTitle) {

@@ -1,10 +1,12 @@
-import { useEffect, RefObject } from 'react';
+import { useEffect, RefObject, DependencyList } from 'react';
 
-// HOOKS: 스크롤 초기화
-export function useResetScroll<T extends HTMLElement>(ref: RefObject<T | null>, dependency: any) {
+export function useResetScroll<T extends HTMLElement>(
+  ref: RefObject<T | null>,
+  deps: DependencyList,
+): void {
   useEffect(() => {
     if (ref.current) {
       ref.current.scrollTop = 0;
     }
-  }, [dependency, ref]);
+  }, [...deps, ref]);
 }
