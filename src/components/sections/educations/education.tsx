@@ -1,7 +1,6 @@
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/shared/ui/card';
-import { CalendarDays, FileBadge, GraduationCap } from 'lucide-react';
+import { Card, CardContent, CardHeader, CardTitle } from '@/shared/ui/card';
+import { CalendarDays, GraduationCap } from 'lucide-react';
 
-// 임시
 const educationData = [
   {
     name: '소프트웨어학과',
@@ -20,7 +19,7 @@ const educationData = [
 
 export default function Education() {
   return (
-    <div className="container mx-auto h-full px-4 py-12">
+    <div className="container mx-auto h-full px-4 py-16">
       <h2 className="section-header">교육사항</h2>
       <div className="tablet:grid-cols-2 desktop:grid-cols-3 mx-auto grid max-w-5xl grid-cols-1 gap-6">
         {educationData.map((education) => (
@@ -49,12 +48,6 @@ export default function Education() {
             <CardContent className="px-6">
               <p className="text-muted-foreground whitespace-pre-line">{education.description}</p>
             </CardContent>
-            <CardFooter className="flex flex-row justify-end">
-              <button className="flex cursor-pointer items-center">
-                <FileBadge className="icon-sm mr-1" />
-                자세히보기
-              </button>
-            </CardFooter>
           </Card>
         ))}
       </div>
