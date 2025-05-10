@@ -3,7 +3,9 @@ export interface ITrouble {
   /** 이슈 제목 */
   title: string;
   /** 이슈 상세 설명 */
-  description: string;
+  situation: string;
+  cause: string;
+  solution: string;
 }
 
 /** 기본 정보 섹션 */
@@ -18,6 +20,16 @@ export interface IProjectInfo {
   tech: string;
 }
 
+/** 프로젝트 역할 항목 */
+export interface IProjectRole {
+  /** 역할 설명 */
+  description: string;
+  /** 블로그 링크 (선택적) */
+  blogLink?: string;
+  /** 블로그 링크 제목 (선택적) */
+  blogTitle?: string;
+}
+
 /** 프로젝트 데이터 전체 구조 */
 export interface IProject {
   /** 고유 ID (Tabs value 등으로 사용) */
@@ -26,14 +38,26 @@ export interface IProject {
   title: string;
   /** 소개 텍스트 */
   intro: string;
+  /** 아키텍쳐 이미지 */
+  architectureImg: string;
   /** 배경 텍스트 */
   background: string;
   /** 기본 정보 섹션 */
   info: IProjectInfo;
   /** 주요 역할 목록 */
-  roles: string[];
+  roles: IProjectRole[];
   /** 트러블슈팅 항목들 */
   troubleshooting: ITrouble[];
+  /** 미리보기 사진들 */
+  previewImages: Array<{
+    url: string;
+    title: string;
+  }>;
+  /** 미리보기 영상들 */
+  previewVideos: Array<{
+    url: string;
+    title: string;
+  }>;
 }
 
 /** 개별 기술(Tech) 항목 */
@@ -62,6 +86,4 @@ export interface ICertification {
   organization: string;
   /** 취득 일자 (연.월 형식) */
   date: string;
-  /** 자격증 번호 */
-  number: string;
 }
