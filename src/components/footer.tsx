@@ -22,7 +22,7 @@ const socialLinks = [
 
 export default function Footer() {
   return (
-    <footer className="bg-background border-t py-8">
+    <footer className="bg-background border-t pt-8 pb-16">
       <div className="container mx-auto px-4">
         <div className="flex flex-col items-center justify-center space-y-6">
           {/* 감사 메시지 */}

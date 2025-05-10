@@ -21,7 +21,6 @@ export default function Home() {
   const mentoringRef = useRef<HTMLDivElement>(null);
   const communityRef = useRef<HTMLDivElement>(null);
 
-  // 2) refs 객체 묶기 (identity 안정화)
   const sectionRefs = useMemo(
     () => ({
       intro: introRef,
@@ -190,6 +189,9 @@ export default function Home() {
         className="relative flex h-screen snap-start flex-col justify-center"
         id="education">
         <Education />
+      </section>
+
+      <section className="relative flex snap-end flex-col justify-center">
         <Footer />
       </section>
     </div>
