@@ -38,6 +38,11 @@ export interface IProject {
   title: string;
   /** 소개 텍스트 */
   intro: string;
+  /** 링크 텍스트 */
+  link: Array<{
+    url: string;
+    title: string;
+  }>;
   /** 아키텍쳐 이미지 */
   architectureImg: string;
   /** 배경 텍스트 */

@@ -5,6 +5,16 @@ export const projects: IProject[] = [
   {
     id: 'project1',
     title: 'NestNet',
+    link: [
+      {
+        url: 'https://nnet.cbnu.ac.kr',
+        title: '배포주소',
+      },
+      {
+        url: 'https://github.com/wonza-hub/ClientDev',
+        title: '깃허브',
+      },
+    ],
     intro: '학과 동아리 생활을 편리하게 공유하고 유익한 정보를 제공하는 웹 서비스',
     background:
       '기존 홈페이지는 2005년에 제작되어 유지보수 문서가 부재해 개선이 불가했으며, 정보를 한눈에 파악하기 어려운 UI/UX의 개선 필요성을 느낌.',
@@ -151,7 +161,13 @@ export const projects: IProject[] = [
   },
   {
     id: 'project2',
-    title: 'Wangnooni',
+    title: 'wangnOOni',
+    link: [
+      {
+        url: 'https://github.com/wonza-hub/wangnOOni-client',
+        title: '깃허브',
+      },
+    ],
     intro: '실시간 운전자 행동 감지 시스템',
     background:
       '운전자의 모습을 관찰하고 피드백하여 올바른 운전 문화를 조성하며, 가까운 운전자들 간에 위험한 운전 행위를 공유하여 사고를 사전에 방지할 수 있도록 함.',
@@ -240,6 +256,12 @@ export const projects: IProject[] = [
   {
     id: 'project3',
     title: 'Vuisiness',
+    link: [
+      {
+        url: 'https://github.com/wonza-hub/vuisiness',
+        title: '깃허브',
+      },
+    ],
     intro:
       '상권, 유동 인구, 카드 사용량 빅데이터를 기반으로 내 주변 상권과 관련한 통계 데이터를 보여주는 서비스',
     background:
