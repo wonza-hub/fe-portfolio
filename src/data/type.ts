@@ -6,6 +6,10 @@ export interface ITrouble {
   situation: string;
   cause: string;
   solution: string;
+  images?: Array<{
+    url: string;
+    title: string;
+  }>;
 }
 
 /** 기본 정보 섹션 */
