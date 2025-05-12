@@ -27,82 +27,87 @@ export const projects: IProject[] = [
     architectureImg: '/assets/img/project/nestnet-아키텍쳐.webp',
     roles: [
       {
-        description:
-          '기획 단계에서 팀원들과 Notion에 분석한 요구사항을 정리하고, 전반적인 UI/UX에 대한 아이디어를 제시하고 공유',
-        blogLink: '',
-        blogTitle: 'UI/UX 디자인 프로세스',
+        description: 'UI/UX 개선',
       },
       {
         description:
-          'Tailwind css가 제공하는 반응형 디자인을 활용해 여러 화면 크기에서 일목요연하게 보이게 UI를 구현',
+          '• 기획 단계에서 팀원들과 Notion에 분석한 요구사항을 정리하고, 전반적인 UI/UX에 대한 아이디어를 제시하고 공유',
       },
       {
         description:
-          '홈 화면에 즉석사진 섹션을 두어 동아리원들끼리 찍은 즉석사진을 온라인에 공유할 수 있는 기능을 제공',
-        blogLink: '',
-        blogTitle: '즉석사진 공유 기능 구현하기',
+          '• Tailwind css가 제공하는 반응형 디자인을 활용해 여러 화면 크기에서 일목요연하게 보이게 UI를 구현',
       },
       {
         description:
-          'Tanstack Query의 useInfiniteQuery를 사용해 페이징 처리를 무한스크롤로 구현하여 페이지 이동 최소화',
-      },
-      {
-        description: '컨텐츠 로딩 효과에 스켈레톤 애니메이션을 사용해 요청이 진행 중임을 표시',
+          '• 홈 화면에 즉석사진 섹션을 두어 동아리원들끼리 찍은 즉석사진을 온라인에 공유할 수 있는 기능을 제공',
       },
       {
         description:
-          '좋아요 기능에 Tanstack Query로 낙관적 업데이트를 적용하여 즉각적인 피드백 제공',
+          '• Tanstack Query의 useInfiniteQuery를 사용해 페이징 처리를 무한스크롤로 구현하여 페이지 이동 최소화',
+      },
+      {
+        description: '• 컨텐츠 로딩 효과에 스켈레톤 애니메이션을 사용해 요청이 진행 중임을 표시',
+      },
+      {
+        description:
+          '• 좋아요 기능에 Tanstack Query로 낙관적 업데이트를 적용하여 즉각적인 피드백 제공',
         blogLink:
           'https://velog.io/@one1_programmer/%EB%A6%AC%EC%95%A1%ED%8A%B8-%EC%BF%BC%EB%A6%AC-%EC%A2%8B%EC%95%84%EC%9A%94-%EA%B8%B0%EB%8A%A5%EC%97%90-%EB%82%99%EA%B4%80%EC%A0%81-%EC%97%85%EB%8D%B0%EC%9D%B4%ED%8A%B8-%EC%A0%81%EC%9A%A9%ED%95%98%EA%B8%B0-feat.-%EB%94%94%EB%B0%94%EC%9A%B4%EC%8A%A4',
         blogTitle: 'Tanstack Query로 낙관적 업데이트 구현하기',
       },
       {
-        description: '시멘틱 태그, 이미지 대체 텍스트, ARIA를 활용해 웹 접근성 향상',
+        description: '• 시멘틱 태그, 이미지 대체 텍스트, ARIA를 활용해 웹 접근성 향상',
         blogLink:
           'https://velog.io/@one1_programmer/%EC%9B%B9-%EC%A0%91%EA%B7%BC%EC%84%B1-%EA%B0%9C%EC%84%A0%ED%95%98%EA%B8%B0',
         blogTitle: '웹 접근성 개선하기',
       },
       {
-        description: '에러 바운더리를 사용해 여러 에러 상황 대처하여 서비스 안정성 향상',
+        description: '• 에러 바운더리를 사용해 여러 에러 상황 대처하여 서비스 안정성 향상',
+      },
+      {
+        description: 'DX 개선',
       },
       {
         description:
-          'GitHub 커밋 컨벤션을 정의하고, URL과 같은 공통 상수 관리에 대한 체계를 세워 작업 효율 개선',
+          '• GitHub 커밋 컨벤션을 정의하고, URL과 같은 공통 상수 관리에 대한 체계를 세워 작업 효율 개선',
       },
       {
         description:
-          'React의 props, TypeScript의 optional parameter 활용해 게시물 등록 및 수정 시 공통으로 사용할 수 있는 폼 구현 등 컴포넌트 주도 개발 수행',
+          '• React의 props, TypeScript의 optional parameter 활용해 게시물 등록 및 수정 시 공통으로 사용할 수 있는 폼 구현 등 컴포넌트 주도 개발 수행',
       },
       {
         description:
-          'React의 Suspense와 React Query의 useSuspenseQuery를 사용해 선언적 비동기 처리를 수행하여 코드 개선',
+          '• React의 Suspense와 React Query의 useSuspenseQuery를 사용해 선언적 비동기 처리를 수행하여 코드 개선',
         blogLink: 'https://velog.io/@one1_programmer/React-Suspense-feat.-useSuspenseInfiniteQuery',
         blogTitle: 'Suspense를 활용한 선언적 비동기 처리',
       },
       {
-        description:
-          'IntersectionObserver와 useRef를 활용한 지연로딩 적용으로 메인 페이지 진입 시 API 요청 횟수 개선',
-      },
-      {
-        description: 'Tanstack Query 캐싱 기능 관련 옵션 활용해 재방문 시 컨텐츠 로딩 속도 개선',
+        description: '성능 개선',
       },
       {
         description:
-          '좋아요 기능에 debounce를 적용해 짧은 시간 내 중복 요청을 못하게 하여 서버 비용 최적화',
+          '• IntersectionObserver와 useRef를 활용한 지연로딩 적용으로 메인 페이지 진입 시 API 요청 횟수 개선',
+      },
+      {
+        description: '• Tanstack Query 캐싱 기능 관련 옵션 활용해 재방문 시 컨텐츠 로딩 속도 개선',
       },
       {
         description:
-          '사진 목록 컴포넌트 같이 자주 리렌더링되는 컴포넌트에 React의 memo를 적용해 렌더링 최적화 수행',
+          '• 좋아요 기능에 debounce를 적용해 짧은 시간 내 중복 요청을 못하게 하여 서버 비용 최적화',
       },
       {
-        description: '지연로딩(React의 lazy) 적용과 vite 설정을 통해 번들링 최적화 수행',
+        description:
+          '• 사진 목록 컴포넌트 같이 자주 리렌더링되는 컴포넌트에 React의 memo를 적용해 렌더링 최적화 수행',
+      },
+      {
+        description: '• 지연로딩(React의 lazy) 적용과 vite 설정을 통해 번들링 최적화 수행',
         blogLink:
           'https://velog.io/@one1_programmer/%ED%94%84%EB%A1%A0%ED%8A%B8%EC%97%94%EB%93%9C-%EB%B2%88%EB%93%A4%EB%A7%81-%EC%B5%9C%EC%A0%81%ED%99%94%EB%A5%BC-%ED%86%B5%ED%95%9C-%EC%9B%B9-%EC%84%B1%EB%8A%A5-%EC%B5%9C%EC%A0%81%ED%99%94-feat.-React-lazy-Rollup',
         blogTitle: '지연로딩 적용과 vite 설정을 통한 번들링 최적화',
       },
       {
         description:
-          '텍스트 압축(brotli) 기법을 적용하여 메인 페이지 진입 시 약 40% (1,519 kB → 593 kB)의 전송량 감소',
+          '• 텍스트 압축(brotli) 기법을 적용하여 메인 페이지 진입 시 약 40% (1,519 kB → 593 kB)의 전송량 감소',
         blogLink:
           'https://velog.io/@one1_programmer/%EC%9B%B9-%EC%95%95%EC%B6%95-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%EC%9D%84-%ED%99%9C%EC%9A%A9%ED%95%98%EC%97%AC-%EC%9B%B9-%EC%84%B1%EB%8A%A5-%EC%B5%9C%EC%A0%81%ED%99%94-%EC%88%98%ED%96%89%ED%95%98%EA%B8%B0-feat.-Vite-Nginx-gzip-Brotli',
         blogTitle: '텍스트 압축으로 웹 성능 최적화',
@@ -110,18 +115,39 @@ export const projects: IProject[] = [
     ],
     troubleshooting: [
       {
-        title: '이미지 최적화',
-        situation: '사진 게시판 목록 로딩 시, layout shift가 빈번하게 일어났습니다.',
-        cause: '보여지는 이미지에 비해 렌더되는 이미지의 너비와 폭이 너무 컸습니다.',
-        solution: '',
-      },
-      {
         title: '사진 게시판 게시물 등록/수정 컴포넌트 재사용',
         situation:
-          '사진 게시판에서 게시물 등록 및 수정 시 같은 <PhotoAlbumPostForm>을 재사용했는데, 기존의 이미지 파일인지 아닌지를 타입스크립트가 판단하지 못했습니다.',
-        cause: '',
-        solution: '',
+          '사진 게시판에서 게시물 등록 및 수정 시 동일한 <PhotoAlbumForm>을 재사용했는데, 파일을 첨부하는 부분에서 기존의 이미지 파일인지 아닌지를 타입스크립트가 판단하지 못했습니다.',
+        cause:
+          '프론트에서는 파일 수정여부를 플래그로써 넘겨받기로 백엔드 팀원과 합의를 했었고, 해당 플래그를 ORIGINAL_FILE_FLAG 상수로 관리하고 있었습니다. 하지만 적절한 분기 처리를 해주지 않아 타입을 추론하지 못했습니다.',
+        solution:
+          '처음에는 타입 단언을 사용하여 기존 파일과 새로 업로드한 파일을 분기하였지만, 타입 가드 개념을 알고난 후 해당 개념을 적용하여 조금 더 안전한 개발이 가능해졌습니다. 이를 통해, 타입 가드로 타입 단언의 문제를 해결하는 방법을 익힐 수 있었습니다.',
+        images: [
+          {
+            url: '/assets/img/project/nestnet-트러블슈팅-1.webp',
+            title: '타입 단언 적용',
+          },
+          {
+            url: '/assets/img/project/nestnet-트러블슈팅-2.webp',
+            title: '타입 가드 적용',
+          },
+        ],
       },
+      // {
+      //   title: '이미지 최적화',
+      //   situation:
+      //     '무한스크롤이 적용된 사진 게시판 목록 로딩 시, layout shift가 빈번하게 일어났습니다.',
+      //   cause:
+      //     '썸네일이 보여지는 공간에 비해 렌더되는 원본 이미지의 너비와 폭이 너무 컸습니다. 이미지 리사이징을 통해 다양한 여러 사이즈의 이미지를 불러오는 api를 만들려 했지만, 백엔드 팀원의 사정상 리팩토링이 힘들었습니다.',
+      //   solution:
+      //     '이미지 리사이즈를 수행하되, 썸네일과 상세 페이지에서 보여지는 이미지 크기들을 고려하여 고정너비 600px이라는 타협 지점을 정했습니다. 이를 통해 상세 페이지의 이미지 화질은 조금 낮아졌지만, 목록 페이지의 이미지 로딩 성능은 향상되었습니다.',
+      //   images: [
+      //     {
+      //       url: '/assets/img/project/',
+      //       title: '메인',
+      //     },
+      //   ],
+      // },
     ],
     // 미리보기 이미지 추가
     previewImages: [
@@ -182,53 +208,53 @@ export const projects: IProject[] = [
     roles: [
       {
         description:
-          'Axios-mock-adapter를 활용한 테스트 목업을 작성해 백엔드 API 완성 이전에 테스트 환경 조성',
+          '• Axios-mock-adapter를 활용한 테스트 목업을 작성해 백엔드 API 완성 이전에 테스트 환경 조성',
       },
       {
-        description: 'Axios-interceptor를 활용한 공통 로직 처리 부분과 뷰를 분리',
-      },
-      {
-        description:
-          'html canvas와 중첩 setTimeout을 활용해 운전자 모습을 서버에 폴링 방식으로 전송하여 근실시간 서비스 구현',
+        description: '• Axios-interceptor를 활용한 공통 로직 처리 부분과 뷰를 분리',
       },
       {
         description:
-          'geolocation API 활용해 사용자의 위치 정보를 수집하여 사용자 간 근접 정도 파악',
+          '• html canvas와 중첩 setTimeout을 활용해 운전자 모습을 서버에 폴링 방식으로 전송하여 근실시간 서비스 구현',
       },
       {
         description:
-          '전역 상태 관리를 사용해 응답값으로 받은 운전자 행위에 대한 피드백 결과를 관리',
-      },
-      {
-        description: 'Chart.js로 다양한 주제의 차트를 시각화하여 사용자별 통계 페이지 제공',
+          '• geolocation API 활용해 사용자의 위치 정보를 수집하여 사용자 간 근접 정도 파악',
       },
       {
         description:
-          'Funnel을 활용한 Multi Step Form으로 회원가입 단계를 세부적으로 분리하여 모바일 친화성 강화',
+          '• 전역 상태 관리를 사용해 응답값으로 받은 운전자 행위에 대한 피드백 결과를 관리',
+      },
+      {
+        description: '• Chart.js로 다양한 주제의 차트를 시각화하여 사용자별 통계 페이지 제공',
       },
       {
         description:
-          '가입 절차 도중 여러 예외 상황(새로고침, 이탈 후 직접 URL 접근)을 고려하여 다양한 사용자 시나리오 대처',
+          '• Funnel을 활용한 Multi Step Form으로 회원가입 단계를 세부적으로 분리하여 모바일 친화성 강화',
+      },
+      {
+        description:
+          '• 가입 절차 도중 여러 예외 상황(새로고침, 이탈 후 직접 URL 접근)을 고려하여 다양한 사용자 시나리오 대처',
         blogLink:
           'https://velog.io/@one1_programmer/%ED%94%84%EB%A1%A0%ED%8A%B8%EC%97%94%EB%93%9C-Multi-Step-Form-%EA%B5%AC%ED%98%84-feat.-useFunnel',
         blogTitle: 'Multi-Step Form 구현하기',
       },
       {
         description:
-          'React Hook Form의 유효성 검증을 활용해 실시간으로 비밀번호 일치 여부를 판단할 수 있게 하여 UX 개선',
+          '• React Hook Form의 유효성 검증을 활용해 실시간으로 비밀번호 일치 여부를 판단할 수 있게 하여 UX 개선',
         blogLink:
           'https://velog.io/@one1_programmer/%ED%94%84%EB%A1%A0%ED%8A%B8%EC%97%94%EB%93%9C-React-Hook-Form%EC%9D%98-useWatch%EB%A5%BC-%ED%99%9C%EC%9A%A9%ED%95%9C-%EB%B9%84%EB%B0%80%EB%B2%88%ED%98%B8-%ED%99%95%EC%9D%B8-%EA%B5%AC%ED%98%84',
         blogTitle: 'React-Hook-Form으로 실시간 비밀번호 일치 로직 구현하기',
       },
     ],
-    troubleshooting: [
-      {
-        title: '',
-        situation: '',
-        cause: '',
-        solution: '',
-      },
-    ],
+    // troubleshooting: [
+    //   {
+    //     title: '',
+    //     situation: '',
+    //     cause: '',
+    //     solution: '',
+    //   },
+    // ],
     // 미리보기 이미지 추가
     previewImages: [
       {
@@ -276,32 +302,32 @@ export const projects: IProject[] = [
     architectureImg: '/assets/img/project/vuisiness-아키텍쳐.webp',
     roles: [
       {
-        description: '기획 단계에서 주요 아이디어 제안 및 240만 개 이상의 상권 빅데이터 확보',
+        description: '• 기획 단계에서 주요 아이디어 제안 및 240만 개 이상의 상권 빅데이터 확보',
       },
       {
         description:
-          '상권 데이터 가공(MongoDB의 GeoJSON 객체 활용)을 통해 위치 기반 쿼리를 할 수 있게 하여, 아이디어 실현의 기반 구성',
+          '• 상권 데이터 가공(MongoDB의 GeoJSON 객체 활용)을 통해 위치 기반 쿼리를 할 수 있게 하여, 아이디어 실현의 기반 구성',
       },
       {
         description:
-          '쿼리에 대한 아이디어를 Slack 채널을 통해 공유하고 허들(화상 회의)을 통해 회의를 진행하는 팀 문화를 주도적으로 조성',
+          '• 쿼리에 대한 아이디어를 Slack 채널을 통해 공유하고 허들(화상 회의)을 통해 회의를 진행하는 팀 문화를 주도적으로 조성',
       },
       {
         description:
-          '카카오의 지도 API를 통해 상점들을 마커로 표시하고, 카카오의 로컬 API 활용해 쿼리에 필요한 행정동 정보를 호출',
+          '• 카카오의 지도 API를 통해 상점들을 마커로 표시하고, 카카오의 로컬 API 활용해 쿼리에 필요한 행정동 정보를 호출',
       },
       {
-        description: 'Chart.js를 사용해 재사용 가능한 그래프 컴포넌트 구현하여 DX 개선',
+        description: '• Chart.js를 사용해 재사용 가능한 그래프 컴포넌트 구현하여 DX 개선',
       },
       {
         description:
-          'Recoil를 활용해 현재 위치, 행정동, 근처 상권 등의 상태 정보를 전역으로 관리해 Props Drilling 방지',
+          '• Recoil를 활용해 현재 위치, 행정동, 근처 상권 등의 상태 정보를 전역으로 관리해 Props Drilling 방지',
       },
       {
-        description: 'React의 memo와 전역 상태 관리를 활용해 렌더링 최적화 수행',
+        description: '• React의 memo와 전역 상태 관리를 활용해 렌더링 최적화 수행',
       },
       {
-        description: '복합 인덱스 적용하여 쿼리 성능 최적화',
+        description: '• 복합 인덱스 적용하여 쿼리 성능 최적화',
       },
     ],
     troubleshooting: [
