@@ -13,11 +13,11 @@ export default function Role({ roles, handleBlogLinkClick }: IProps) {
         역할
       </dt>
       <dd className="px-4 py-4">
-        <ul className="list-disc space-y-2 pl-5">
+        <ul className="space-y-2 pl-5">
           {roles.map((role, index) => (
             <li
               key={index}
-              className="text-muted-foreground">
+              className="text-muted-foreground list-none">
               {role.blogLink ? (
                 <button
                   onClick={() => handleBlogLinkClick(role)}
