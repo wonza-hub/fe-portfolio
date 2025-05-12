@@ -28,7 +28,7 @@ export default function Projects() {
                 key={project.id}
                 value={project.id}
                 className="px-6">
-                {project.title}
+                <h3>{project.title}</h3>
               </TabsTrigger>
             ))}
           </TabsList>

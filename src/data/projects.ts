@@ -22,7 +22,7 @@ export const projects: IProject[] = [
       period: '2023.07~2024.02 (유지보수 중)',
       team: 'FE 2명, BE 1명',
       role: 'FE',
-      tech: 'React / TypeScript / Tailwind CSS / Axios / Tanstack Query / React Hook Form',
+      tech: 'React / TypeScript / Tailwind CSS / Axios / Tanstack Query / React Hook Form / React Router / Vite',
     },
     architectureImg: '/assets/img/project/nestnet-아키텍쳐.webp',
     roles: [
@@ -110,14 +110,15 @@ export const projects: IProject[] = [
     ],
     troubleshooting: [
       {
-        title: '성능 최적화',
-        situation: '',
-        cause: '',
+        title: '이미지 최적화',
+        situation: '사진 게시판 목록 로딩 시, layout shift가 빈번하게 일어났습니다.',
+        cause: '보여지는 이미지에 비해 렌더되는 이미지의 너비와 폭이 너무 컸습니다.',
         solution: '',
       },
       {
-        title: '상태 관리 복잡성',
-        situation: '',
+        title: '사진 게시판 게시물 등록/수정 컴포넌트 재사용',
+        situation:
+          '사진 게시판에서 게시물 등록 및 수정 시 같은 <PhotoAlbumPostForm>을 재사용했는데, 기존의 이미지 파일인지 아닌지를 타입스크립트가 판단하지 못했습니다.',
         cause: '',
         solution: '',
       },
@@ -175,7 +176,7 @@ export const projects: IProject[] = [
       period: '2024.04 ~ 2024.11',
       team: 'FE 1명, BE 1명, AI 1명',
       role: 'FE',
-      tech: 'React / TypeScript / Styled Components / Axios / Tanstack Query / Zustand / React Hook Form / Chart.js',
+      tech: 'React / TypeScript / Styled Components / Axios / Tanstack Query / Zustand / React Hook Form / Chart.js / Vite',
     },
     architectureImg: '/assets/img/project/wangnooni-아키텍쳐.webp',
     roles: [
@@ -330,4 +331,130 @@ export const projects: IProject[] = [
       },
     ],
   },
+  {
+    id: 'project4',
+    title: 'AWS 동적 자원 관리 프로그램',
+    link: [
+      {
+        url: 'https://github.com/wonza-hub/aws-dynamic-resource-management-program',
+        title: '깃허브',
+      },
+    ],
+    intro: 'SDK를 활용하여 AWS 상의 서버 관리를 수행할 수 있는 웹 애플리케이션',
+    background:
+      '실습 과정 중 가상머신 상에 진행했던 클러스터 구축은 상당한 수작업을 요구했음. 이에 인스턴스를 AWS에 배포하고 SDK를 사용하여 GUI로 클러스터를 관리하고자 함.',
+    info: {
+      period: '2024.11 ~ 2024.12',
+      team: '개인',
+      role: 'FE, BE',
+      tech: 'JavaScript / Express / ejs / AWS SDK / EC2 / CloudWatch / SNS',
+    },
+    architectureImg: '/assets/img/project/cloud-아키텍쳐.webp',
+    roles: [
+      {
+        description: '포스트맨에 RESTful API에 맞추어 자원관리에 필요한 API 정리',
+      },
+      {
+        description: 'Express로 웹 애플리케이션 서버 및 CRUD 구현',
+      },
+      {
+        description:
+          'AWS SDK로 EC2 ASG, CloudWatch, SNS와 연동하여 리소스 임계치 도달 시 서버 확장 및 관리자 메일 알림 구현',
+      },
+      {
+        description: 'ejs로 UI 구성',
+      },
+    ],
+    troubleshooting: [],
+    // 미리보기 이미지 추가
+    previewImages: [],
+    previewVideos: [],
+  },
+  // {
+  //   id: 'project3',
+  //   title: 'Bank!t',
+  //   link: [
+  //     {
+  //       url: 'https://github.com/wonza-hub/internet-banking-client',
+  //       title: '깃허브',
+  //     },
+  //   ],
+  //   intro: '하이브리드 클라우드에서 동작하는 인터넷 뱅킹 웹 애플리케이션',
+  //   background: '안정적인 ',
+  //   info: {
+  //     period: '2024.06 ~ 2024.11',
+  //     team: 'FE 1명, BE 1명, DevOps 2명',
+  //     role: 'FE, CI/CD',
+  //     tech: 'React / JavaScript / Styled-components / Axios / React Hook Form / Vite / Jenkins / ArgoCD / Helm',
+  //   },
+  //   architectureImg: '',
+  //   roles: [
+  //     {
+  //       description: 'Figma에 간단한 UI 시안 작성하고, React를 사용하여 전반적인 UI 구성',
+  //     },
+  //     {
+  //       description: 'Python과 Playwright를 활용하여 공지사항 크롤링 코드 작성',
+  //     },
+  //     {
+  //       description:
+  //         'AWS Lambda와 EventBridge를 활용하여 주기적인 크롤링하도록 리팩토링하여 자동화 실현',
+  //     },
+  //     {
+  //       description: '',
+  //     },
+  //   ],
+  //   troubleshooting: [],
+  //   // 미리보기 이미지 추가
+  //   previewImages: [],
+  //   previewVideos: [
+  //     {
+  //       url: 'https://www.youtube.com/embed/6wWa0688CdI',
+  //       title: '데모 영상',
+  //     },
+  //   ],
+  // },
+  // {
+  //   id: 'project3',
+  //   title: 'MoaBoa',
+  //   link: [
+  //     {
+  //       url: 'https://github.com/wonza-hub/client-dev',
+  //       title: '깃허브',
+  //     },
+  //   ],
+  //   intro: '교내 학과, 사업단 홈페이지 등에 흩어진 공지사항을 통합하여 보여주는 서비스',
+  //   background:
+  //     '평소 학과나 사업단과 같은 교내 홈페이지에 올라오는 공지를 못하는 문제가 있었음. 여러 공지사항을 한 곳에서 통합하여 보여주면 좋겠다고 생각함.',
+  //   info: {
+  //     period: '2024.05 ~ 2024.06 (유지보수 중)',
+  //     team: 'FE 1명, BE 3명',
+  //     role: 'FE(PM), 크롤링',
+  //     tech: 'React / TypeScript / Styled-components / Axios / React Router / Vite / Python / Playwright',
+  //   },
+  //   architectureImg: '',
+  //   roles: [
+  //     {
+  //       description: 'Figma에 간단한 UI 시안 작성하고, React를 사용하여 전반적인 UI 구성',
+  //     },
+  //     {
+  //       description: 'Python과 Playwright를 활용하여 공지사항 크롤링 코드 작성',
+  //     },
+  //     {
+  //       description:
+  //         'AWS Lambda와 EventBridge를 활용하여 주기적인 크롤링하도록 리팩토링하여 자동화 실현',
+  //     },
+  //     {
+  //       description: '',
+  //     },
+  //   ],
+  //   troubleshooting: [],
+  //   // 미리보기 이미지 추가
+  //   previewImages: [],
+  //   previewVideos: [
+  //     {
+  //       url: 'https://www.youtube.com/embed/6wWa0688CdI',
+  //       title: '데모 영상',
+  //     },
+  //   ],
+  // },
 ];

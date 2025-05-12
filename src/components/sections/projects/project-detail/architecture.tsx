@@ -14,7 +14,7 @@ export default function Architecture({ projectTitle, architectureImg }: IProps) 
       </dt>
       <dd className="py-2">
         <Image
-          width={650}
+          width={500}
           height={350}
           className="mx-auto"
           src={`${architectureImg}`}

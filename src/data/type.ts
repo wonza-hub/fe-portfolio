@@ -52,7 +52,7 @@ export interface IProject {
   /** 주요 역할 목록 */
   roles: IProjectRole[];
   /** 트러블슈팅 항목들 */
-  troubleshooting: ITrouble[];
+  troubleshooting?: ITrouble[];
   /** 미리보기 사진들 */
   previewImages: Array<{
     url: string;

@@ -119,7 +119,9 @@ export default function ProjectItem({ project }: { project: IProject }) {
           handleBlogLinkClick={handleBlogLinkClick}
         />
 
-        <TroubleShooting troubleshooting={troubleshooting} />
+        {troubleshooting && troubleshooting?.length !== 0 && (
+          <TroubleShooting troubleshooting={troubleshooting} />
+        )}
         {/* 결과 */}
         <Output
           projectTitle={title}
