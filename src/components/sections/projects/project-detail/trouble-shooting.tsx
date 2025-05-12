@@ -5,6 +5,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from '@/shared/ui/accordion';
+import TroubleShootingImages from './trouble-shooting-images';
 
 // COMPONENT: 트러블슈팅
 export default function TroubleShooting({ troubleshooting }: { troubleshooting: ITrouble[] }) {
@@ -17,7 +18,7 @@ export default function TroubleShooting({ troubleshooting }: { troubleshooting: 
         <Accordion
           type="single"
           collapsible
-          className="space-y-4">
+          className="h-fit space-y-4">
           {troubleshooting.map((issue, index) => (
             <AccordionItem
               key={index}
@@ -26,18 +27,27 @@ export default function TroubleShooting({ troubleshooting }: { troubleshooting: 
               <AccordionTrigger className="bg-card hover:bg-muted/50 px-4 py-3 font-medium">
                 <h5>{issue.title}</h5>
               </AccordionTrigger>
-              <AccordionContent className="space-y-3 px-4 pt-2">
-                <div>
-                  <h6 className="text-primary mb-1 text-sm font-semibold">상황</h6>
-                  <p className="text-muted-foreground text-sm">{issue.situation}</p>
-                </div>
-                <div>
-                  <h6 className="text-primary mb-1 text-sm font-semibold">원인</h6>
-                  <p className="text-muted-foreground text-sm">{issue.cause}</p>
-                </div>
-                <div>
-                  <h6 className="text-primary mb-1 text-sm font-semibold">해결</h6>
-                  <p className="text-muted-foreground text-sm">{issue.solution}</p>
+              <AccordionContent>
+                <div className="laptop:flex-row flex w-full flex-col">
+                  {/* 관련 이미지 */}
+                  <div className="laptop:w-[50%] w-full px-8 py-2">
+                    <TroubleShootingImages images={issue.images} />
+                  </div>
+                  {/* 상세 설명 */}
+                  <article className="laptop:w-[50%] w-full space-y-3 px-8 py-2">
+                    <div>
+                      <h6 className="text-primary mb-1 text-sm font-semibold">상황</h6>
+                      <p className="text-muted-foreground text-sm">{issue.situation}</p>
+                    </div>
+                    <div>
+                      <h6 className="text-primary mb-1 text-sm font-semibold">원인</h6>
+                      <p className="text-muted-foreground text-sm">{issue.cause}</p>
+                    </div>
+                    <div>
+                      <h6 className="text-primary mb-1 text-sm font-semibold">해결</h6>
+                      <p className="text-muted-foreground text-sm">{issue.solution}</p>
+                    </div>
+                  </article>
                 </div>
               </AccordionContent>
             </AccordionItem>
