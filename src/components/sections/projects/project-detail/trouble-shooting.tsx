@@ -34,7 +34,7 @@ export default function TroubleShooting({ troubleshooting }: { troubleshooting: 
                     <TroubleShootingImages images={issue.images} />
                   </div>
                   {/* 상세 설명 */}
-                  <article className="laptop:w-[50%] w-full space-y-3 px-8 py-2">
+                  <article className="laptop:w-[50%] w-full space-y-3 px-8 pt-2 pb-4">
                     <div>
                       <h6 className="text-primary mb-1 text-sm font-semibold">상황</h6>
                       <p className="text-muted-foreground text-sm">{issue.situation}</p>

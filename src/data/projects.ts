@@ -337,6 +337,16 @@ export const projects: IProject[] = [
         cause: '데이터의 구조가 MongoDB가 지리공간 쿼리를 수행하기에 적합하지 않은 구조였습니다.',
         solution:
           'MongoDB가 제공하는 위치 기반 인덱스인 $nearSphere를 활용하기 위해, 기존 위치 필드를 GeoJSON 형태로 변경하는 전처리 과정을 수행했습니다.',
+        images: [
+          {
+            url: '/assets/img/project/vuisiness-트러블슈팅-1.webp',
+            title: '기존 위치 필드를 GeoJSON 형태로 변경(전처리)',
+          },
+          {
+            url: '/assets/img/project/vuisiness-트러블슈팅-2.webp',
+            title: '인덱스 생성 후, 쿼리 수행',
+          },
+        ],
       },
       {
         title: '차트 리렌더링 대응',
@@ -345,7 +355,17 @@ export const projects: IProject[] = [
         cause:
           '기존에는 useState로 상태를 관리했기 때문에, 위치가 변경될 때마다 Props Drilling이 발생했습니다.',
         solution: `전역 상태 관리가 필요하다고 판단했고, 행정동 상태로부터 파생된 상태(행정동의 코드, 이름, 시군구 이름)를 추출해야 했습니다. 
-          atom과 atom으로부터 상태를 파생할 수 있는 Recoil이 적합하다고 생각했고, React의 memo와 결합하여 적용했습니다.`,
+        atom과 atom으로부터 상태를 파생할 수 있는 Recoil이 적합하다고 생각했고, React의 memo와 결합하여 적용했습니다.`,
+        images: [
+          {
+            url: '/assets/img/project/vuisiness-트러블슈팅-3.webp',
+            title: 'Recoil의 selector 선언',
+          },
+          {
+            url: '/assets/img/project/vuisiness-트러블슈팅-4.webp',
+            title: '차트에 적용한 코드',
+          },
+        ],
       },
     ],
     // 미리보기 이미지 추가

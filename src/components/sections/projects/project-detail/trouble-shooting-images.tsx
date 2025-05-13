@@ -31,7 +31,7 @@ export default function TroubleShootingImages({ images }: { images: ITrouble['im
                         alt={`${imageItem.title}에 대한 이미지`}
                         width={600}
                         height={400}
-                        className="aspect-video w-full object-cover"
+                        className="aspect-video w-full object-contain"
                       />
                       <div className="bg-muted/20 p-2 text-center text-sm">{imageItem.title}</div>
                     </div>
