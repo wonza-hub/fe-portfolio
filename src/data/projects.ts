@@ -398,17 +398,17 @@ export const projects: IProject[] = [
     architectureImg: '/assets/img/project/cloud-아키텍쳐.webp',
     roles: [
       {
-        description: '포스트맨에 RESTful API에 맞추어 자원관리에 필요한 API 정리',
+        description: '• 포스트맨에 RESTful API에 맞추어 자원관리에 필요한 API 정리',
       },
       {
-        description: 'Express로 웹 애플리케이션 서버 및 CRUD 구현',
+        description: '• Express로 웹 애플리케이션 서버 및 CRUD 구현',
       },
       {
         description:
-          'AWS SDK로 EC2 ASG, CloudWatch, SNS와 연동하여 리소스 임계치 도달 시 서버 확장 및 관리자 메일 알림 구현',
+          '• AWS SDK로 EC2 ASG, CloudWatch, SNS와 연동하여 리소스 임계치 도달 시 서버 확장 및 관리자 메일 알림 구현',
       },
       {
-        description: 'ejs로 UI 구성',
+        description: '• ejs로 UI 구성',
       },
     ],
     troubleshooting: [],
