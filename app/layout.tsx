@@ -7,6 +7,11 @@ import localFont from 'next/font/local';
 export const metadata: Metadata = {
   title: '우닐의 포트폴리오',
   description: '성장하는 프론트엔드 개발자의 포트폴리오입니다.',
+  openGraph: {
+    title: "Woonil's Portfolio",
+    description: '우닐의 포트폴리오입니다.',
+    images: ['/assets/img/metadata-og.png'],
+  },
 };
 
 // FONT: 프리텐다드
