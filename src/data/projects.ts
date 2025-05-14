@@ -379,6 +379,73 @@ export const projects: IProject[] = [
   },
   {
     id: 'project4',
+    title: 'Bank!t',
+    link: [
+      {
+        url: 'https://github.com/wonza-hub/internet-banking-client',
+        title: '깃허브 (FE)',
+      },
+      {
+        url: 'https://github.com/LikeLion-Team2/internet-banking-server',
+        title: '깃허브 (BE)',
+      },
+    ],
+    intro: '하이브리드 클라우드에서 동작하는 인터넷 뱅킹 웹 애플리케이션',
+    background: '안정적인 금융 서비스를 제공하여, 서비스 안정성 및 사용자 경험을 향상시키기 위함.',
+    info: {
+      period: '2024.06 ~ 2024.11',
+      team: 'FE 1명, BE 1명, DevOps 2명',
+      role: 'FE, CI/CD',
+      tech: 'React / JavaScript / Styled-components / Axios / React Hook Form / Vite / Jenkins / Harbor / ArgoCD / Helm / GitHub',
+    },
+    architectureImg: '/assets/img/project/bankit-아키텍쳐.webp',
+    roles: [
+      {
+        description: '• 전체 UI를 설계하고, React를 사용하여 전체 화면 구성',
+      },
+      {
+        description:
+          '• GitOps 기반의 CI/CD 파이프라인으로 배포 자동화 구현하여 Git 단일 진실 공급원(Single Source Of Truth, SSOT) 실현',
+      },
+      {
+        description:
+          '• 팀원이 담당한 백엔드 Dockerfile에 경량 베이스 이미지, 멀티 스테이지 빌드 사용 제안 및 최적화 수행(1.15GB -> 202MB)',
+      },
+      {
+        description: '',
+      },
+    ],
+    troubleshooting: [
+      {
+        title: 'GitOps CI/CD 파이프라인 구축',
+        situation: 'CI/CD 개념이 생소하여 초기 구상의 어려움이 있었습니다.',
+        cause:
+          'Jenkins, Harbor 등에 대해 각각의 실습만 진행한 상태이고, 전체적인 결합은 해보지 않은 상태였습니다.',
+        solution:
+          '강사님, 오픈채팅방의 선배 엔지니어분들에게 질문하고 파이프라인 구상의 토대를 마련했습니다. 특히, 개발 프로세스의 Git 로그를 바탕으로 변경을 추적하는 방법을 터득했습니다.',
+        images: [
+          {
+            url: '/assets/img/project/bankit-트러블슈팅-1.webp',
+            title: '전체 파이프라인 구조',
+          },
+        ],
+      },
+    ],
+    // 미리보기 이미지 추가
+    previewImages: [
+      {
+        url: '/assets/img/project/bankit-구현화면-1.webp',
+        title: '구현화면-로그인/회원가입/계좌개설/통장조회',
+      },
+      {
+        url: '/assets/img/project/bankit-구현화면-2.webp',
+        title: '구현화면-송금/거래내역조회/송금상세/이체상세',
+      },
+    ],
+    previewVideos: [],
+  },
+  {
+    id: 'project5',
     title: 'AWS 동적 자원 관리 프로그램',
     link: [
       {
@@ -416,49 +483,6 @@ export const projects: IProject[] = [
     previewImages: [],
     previewVideos: [],
   },
-  // {
-  //   id: 'project3',
-  //   title: 'Bank!t',
-  //   link: [
-  //     {
-  //       url: 'https://github.com/wonza-hub/internet-banking-client',
-  //       title: '깃허브',
-  //     },
-  //   ],
-  //   intro: '하이브리드 클라우드에서 동작하는 인터넷 뱅킹 웹 애플리케이션',
-  //   background: '안정적인 ',
-  //   info: {
-  //     period: '2024.06 ~ 2024.11',
-  //     team: 'FE 1명, BE 1명, DevOps 2명',
-  //     role: 'FE, CI/CD',
-  //     tech: 'React / JavaScript / Styled-components / Axios / React Hook Form / Vite / Jenkins / ArgoCD / Helm',
-  //   },
-  //   architectureImg: '',
-  //   roles: [
-  //     {
-  //       description: 'Figma에 간단한 UI 시안 작성하고, React를 사용하여 전반적인 UI 구성',
-  //     },
-  //     {
-  //       description: 'Python과 Playwright를 활용하여 공지사항 크롤링 코드 작성',
-  //     },
-  //     {
-  //       description:
-  //         'AWS Lambda와 EventBridge를 활용하여 주기적인 크롤링하도록 리팩토링하여 자동화 실현',
-  //     },
-  //     {
-  //       description: '',
-  //     },
-  //   ],
-  //   troubleshooting: [],
-  //   // 미리보기 이미지 추가
-  //   previewImages: [],
-  //   previewVideos: [
-  //     {
-  //       url: 'https://www.youtube.com/embed/6wWa0688CdI',
-  //       title: '데모 영상',
-  //     },
-  //   ],
-  // },
   // {
   //   id: 'project3',
   //   title: 'MoaBoa',
