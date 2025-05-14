@@ -58,12 +58,12 @@ export interface IProject {
   /** 트러블슈팅 항목들 */
   troubleshooting?: ITrouble[];
   /** 미리보기 사진들 */
-  previewImages: Array<{
+  previewImages?: Array<{
     url: string;
     title: string;
   }>;
   /** 미리보기 영상들 */
-  previewVideos: Array<{
+  previewVideos?: Array<{
     url: string;
     title: string;
   }>;
