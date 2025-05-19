@@ -247,14 +247,22 @@ export const projects: IProject[] = [
         blogTitle: 'React-Hook-Form으로 실시간 비밀번호 일치 로직 구현하기',
       },
     ],
-    // troubleshooting: [
-    //   {
-    //     title: '',
-    //     situation: '',
-    //     cause: '',
-    //     solution: '',
-    //   },
-    // ],
+    troubleshooting: [
+      {
+        title: '운전자 모습을 이미지로 변환하는 방식에 대한 고민',
+        situation: `초기에는 서비스를 앱으로 구현하기 위해 React Native를 활용했고, 1) 휴대전화 카메라로 사진을 찍는 방식 2) 화면 캡처 방식 3) 촬영 화면을 그리는 방식을 시도했습니다.`,
+        cause: `1)의 경우, iOS에서는 카메라 셔터음을 무음으로 설정할 수 없는 제약이 있어, UX를 해치지 않고 기능을 구현하는 데 한계가 있었습니다. 
+        2)와 3) 경우, 특정 영역만 캡처를 못하거나 촬영 영역은 그리지 못하는 문제가 있었습니다.`,
+        solution: `오픈채팅방의 선배 개발자분들께 질문을 하여 하드웨어 성능 관련 문제일 수도 있다는 답변을 들었습니다. 하지만 저의 지식 수준과 남은 기간을 고려하여 개발 환경을 웹으로 변경하여 html canvas를 사용하기로 했습니다.
+        사용자를 녹화하고 있는 영역(video html 요소 영역)을 canvas에 그려준 후, 해당 부분을 canvas의 toDataURL 메서드를 활용하여 이미지로 변환하였습니다.`,
+        images: [
+          {
+            title: 'video 요소를 바탕으로 canvas로 이미지를 그린 후 반환하는 함수',
+            url: '/assets/img/project/wangnooni-트러블슈팅-1.webp',
+          },
+        ],
+      },
+    ],
     // 미리보기 이미지 추가
     previewImages: [
       {
