@@ -288,8 +288,126 @@ export const projects: IProject[] = [
     ],
     previewVideos: [],
   },
-  {
+    {
     id: 'project3',
+    title: 'Bank!t',
+    link: [
+      {
+        url: 'https://github.com/wonza-hub/internet-banking-client',
+        title: '깃허브 (FE)',
+      },
+      {
+        url: 'https://github.com/LikeLion-Team2/internet-banking-server',
+        title: '깃허브 (BE)',
+      },
+    ],
+    intro: '하이브리드 클라우드에서 동작하는 인터넷 뱅킹 웹 애플리케이션',
+    background: '안정적인 금융 서비스를 제공하여, 서비스 안정성 및 사용자 경험을 향상시키기 위함.',
+    info: {
+      period: '2024.06 ~ 2024.11',
+      team: 'FE 1명, BE 1명, DevOps 2명',
+      role: 'FE, CI/CD',
+      tech: 'React / JavaScript / Styled-components / Axios / React Hook Form / Vite / Jenkins / Harbor / ArgoCD / Helm / GitHub',
+    },
+    architectureImg: '/assets/img/project/bankit-아키텍쳐.webp',
+    roles: [
+      {
+        description: '• 전체 UI를 설계하고, React를 사용하여 전체 화면 구성',
+      },
+      {
+        description:
+          '• GitOps 기반의 CI/CD 파이프라인으로 배포 자동화 구현하여 Git 단일 진실 공급원(Single Source Of Truth, SSOT) 실현',
+      },
+      {
+        description:
+          '• 팀원이 담당한 백엔드 Dockerfile에 경량 베이스 이미지, 멀티 스테이지 빌드 사용 제안 및 최적화 수행(1.15GB -> 202MB)',
+      },
+      {
+        description: '',
+      },
+    ],
+    troubleshooting: [
+      {
+        title: 'GitOps CI/CD 파이프라인 구축',
+        situation: 'CI/CD 개념이 생소하여 초기 구상의 어려움이 있었습니다.',
+        cause:
+          'Jenkins, Harbor 등에 대해 각각의 실습만 진행한 상태이고, 전체적인 결합은 해보지 않은 상태였습니다.',
+        solution:
+          '강사님, 오픈채팅방의 선배 엔지니어분들에게 질문하고 파이프라인 구상의 토대를 마련했습니다. 특히, 개발 프로세스의 Git 로그를 바탕으로 변경을 추적하는 방법을 터득했습니다.',
+        images: [
+          {
+            url: '/assets/img/project/bankit-트러블슈팅-1.webp',
+            title: '전체 파이프라인 구조',
+          },
+        ],
+      },
+      {
+        title: 'Docker 이미지 최적화',
+        situation: 'Kubernetes 환경에서 무거운 패키지 설치 시, 워커노드가 비정상 종료되었습니다.',
+        cause:
+          'free 명령어로 메모리 사용량 확인 결과, 백엔드 이미지가 올라간 pod가 많은 용량을 차지하고 있었습니다.',
+        solution:
+          '경량 베이스 이미지(alpine)와 멀티 스테이지 빌드를 사용하여 이미지 최적화 수행했습니다 (1.15GB -> 202MB)',
+        images: [
+          {
+            url: '/assets/img/project/bankit-트러블슈팅-2.webp',
+            title: 'Dockerfile 내용',
+          },
+        ],
+      },
+      {
+        title: 'Docker 소켓 파일 권한 수정',
+        situation: 'Jenkins 빌드 과정 중 docker daemon에 접근하지 못해 빌드가 실패했습니다.',
+        cause:
+          'Jenkins 컨테이너가 재시작될 때마다 내부의 유저와 그룹 설정을 초기화했습니다.',
+        solution:
+          'Docker 소켓 파일에 대한 권한을 수정하여 Jenkins 컨테이너가 docker daemon에 접근할 수 있도록 했습니다.',
+        images: [
+          {
+            url: '/assets/img/project/bankit-트러블슈팅-3.webp',
+            title: '수행 명령어',
+          },
+        ],
+      },
+      {
+        title: 'Nginx에서 환경변수 사용',
+        situation: 'Kubernetes 클러스터 내에서 프론트엔드로부터 백엔드 Service로 요청을 보낼 때, Nginx의 환경변수(백엔드 서비스명인 BACKEND_SERVICE)를 치환하지 못했습니다.',
+        cause:
+          'Nginx는 기본적으로 환경 변수를 직접 참조하거나 설정 파일 내에서 동적으로 대체하는 기능이 없었습니다.',
+        solution:
+          `먼저 envsubst 도구로 템플릿 파일 내의 환경 변수를 활성화하는 스크립트를 작성하고, Dockerfile에서 이를 참조하게 했습니다. 
+          이후 Kubernetes는 pod 생성 시, ConfigMap을 참조하여 Nginx의 파일 내 환경 변수에 값을 주입할 수 있었습니다.`,
+        images: [
+          {
+            url: '/assets/img/project/bankit-트러블슈팅-4.webp',
+            title: 'Nginx 설정 파일 내용',
+          },
+          {
+            url: '/assets/img/project/bankit-트러블슈팅-5.webp',
+            title: '스크립트 내용',
+          },
+          {
+            url: '/assets/img/project/bankit-트러블슈팅-6.webp',
+            title: 'ConfigMap 내용',
+          },
+        ],
+      },
+    ],
+    // 미리보기 이미지 추가
+    previewImages: [
+      {
+        url: '/assets/img/project/bankit-구현화면-1.webp',
+        title: '구현화면-로그인/회원가입/계좌개설/통장조회',
+      },
+      {
+        url: '/assets/img/project/bankit-구현화면-2.webp',
+        title: '구현화면-송금/거래내역조회/송금상세/이체상세',
+      },
+    ],
+    previewVideos: [],
+  },
+  {
+    id: 'project4',
     title: 'Vuisiness',
     link: [
       {
@@ -384,73 +502,6 @@ export const projects: IProject[] = [
         title: '데모 영상',
       },
     ],
-  },
-  {
-    id: 'project4',
-    title: 'Bank!t',
-    link: [
-      {
-        url: 'https://github.com/wonza-hub/internet-banking-client',
-        title: '깃허브 (FE)',
-      },
-      {
-        url: 'https://github.com/LikeLion-Team2/internet-banking-server',
-        title: '깃허브 (BE)',
-      },
-    ],
-    intro: '하이브리드 클라우드에서 동작하는 인터넷 뱅킹 웹 애플리케이션',
-    background: '안정적인 금융 서비스를 제공하여, 서비스 안정성 및 사용자 경험을 향상시키기 위함.',
-    info: {
-      period: '2024.06 ~ 2024.11',
-      team: 'FE 1명, BE 1명, DevOps 2명',
-      role: 'FE, CI/CD',
-      tech: 'React / JavaScript / Styled-components / Axios / React Hook Form / Vite / Jenkins / Harbor / ArgoCD / Helm / GitHub',
-    },
-    architectureImg: '/assets/img/project/bankit-아키텍쳐.webp',
-    roles: [
-      {
-        description: '• 전체 UI를 설계하고, React를 사용하여 전체 화면 구성',
-      },
-      {
-        description:
-          '• GitOps 기반의 CI/CD 파이프라인으로 배포 자동화 구현하여 Git 단일 진실 공급원(Single Source Of Truth, SSOT) 실현',
-      },
-      {
-        description:
-          '• 팀원이 담당한 백엔드 Dockerfile에 경량 베이스 이미지, 멀티 스테이지 빌드 사용 제안 및 최적화 수행(1.15GB -> 202MB)',
-      },
-      {
-        description: '',
-      },
-    ],
-    troubleshooting: [
-      {
-        title: 'GitOps CI/CD 파이프라인 구축',
-        situation: 'CI/CD 개념이 생소하여 초기 구상의 어려움이 있었습니다.',
-        cause:
-          'Jenkins, Harbor 등에 대해 각각의 실습만 진행한 상태이고, 전체적인 결합은 해보지 않은 상태였습니다.',
-        solution:
-          '강사님, 오픈채팅방의 선배 엔지니어분들에게 질문하고 파이프라인 구상의 토대를 마련했습니다. 특히, 개발 프로세스의 Git 로그를 바탕으로 변경을 추적하는 방법을 터득했습니다.',
-        images: [
-          {
-            url: '/assets/img/project/bankit-트러블슈팅-1.webp',
-            title: '전체 파이프라인 구조',
-          },
-        ],
-      },
-    ],
-    // 미리보기 이미지 추가
-    previewImages: [
-      {
-        url: '/assets/img/project/bankit-구현화면-1.webp',
-        title: '구현화면-로그인/회원가입/계좌개설/통장조회',
-      },
-      {
-        url: '/assets/img/project/bankit-구현화면-2.webp',
-        title: '구현화면-송금/거래내역조회/송금상세/이체상세',
-      },
-    ],
-    previewVideos: [],
   },
   {
     id: 'project5',
